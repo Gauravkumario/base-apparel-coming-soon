@@ -114,6 +114,12 @@ h1 > mark {
 	border-radius: 25px;
 	background-image: linear-gradient(to right,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
+
+#arrow-logo:hover{
+	background-color: #FACECF;
+	box-shadow: 3px 3px 15px 0 #EED3D4;
+}
+
 #error-txt{
 	display: none;
 	color: hsl(0, 93%, 68%);
