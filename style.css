@@ -1,0 +1,186 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/************main-div*******************/
+.parent {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+}
+
+/*********************left-div******************/
+.div1{grid-area: 1 / 1 / 2 / 2;
+	width: 122%;
+	background-image: url(./images/bg-pattern-desktop.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 5rem 9rem 7rem;
+	display: flex;
+	flex-direction: column;
+	align-items: right;
+	justify-content: space-between;
+
+}
+
+.div1 #company-logo{
+	width: 200px;
+}
+
+.div1 #ambassador-image{
+	display: none;
+}
+
+.div1 h1{
+	font-size: 64px;
+	color: hsl(0, 6%, 24%);
+	letter-spacing: 1rem;
+}
+
+.div1 h1 mark{
+	color: hsl(0, 36%, 70%);
+	font-weight: 300;
+	background-color: transparent;
+}
+
+.div1 p{
+	color: hsl(0, 36%, 70%);
+	font-size: 18px;
+	line-height: 1.7rem;
+	padding-right: 9rem;
+}
+
+.div1 > form > #user-mail{
+	border: solid;
+	width: 70%;
+	height: 3.2rem;
+	border-radius: 28px;
+	color: hsl(0, 36%, 70%);
+	display: flex;
+	flex-direction: row;
+}
+
+.div1 > form > #user-mail >input{
+	border: none;
+	height: 2.9rem;
+	padding: 15px 18px ;
+	width: 70%;
+	color: hsl(0, 36%, 70%);
+	font-size: 18px;
+	border-radius: 28px;
+}
+
+.div1 > form > #user-mail >input:focus{
+	outline: none;
+}
+
+#error-logo,#arrow-logo{
+	width: 10%;
+	height: 2.9rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#error-logo img{
+	width: 50%;
+	display: none;
+}
+
+#arrow-logo{
+	width: 20%;
+	margin-top: -3px;
+	height: 3.3rem;
+	cursor: pointer;
+	border: none;
+	border-radius: 28px;
+	background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+#arrow-logo img{
+	width: 15%;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: hsl(0, 36%, 70%);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: hsl(0, 36%, 70%);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: hsl(0, 36%, 70%);
+}
+
+form > p{
+	color: hsl(0, 93%, 68%) !important;
+	padding: 5px 0 0 18px;
+	display: none;
+}
+
+
+/************************right-div**************/
+.div2{
+	height: 100%;
+	grid-area: 1 / 2 / 2 / 3;
+	background-image: url(./images/hero-desktop.jpg);
+	background-size: cover ;
+	background-position: right;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+
+
+@media (max-width: 850px){
+	.div1{
+		width: 100%;
+		padding: 0px;
+	}
+
+	#company-logo-bar{
+		padding: 45px;
+	}
+
+	.div1 #ambassador-image{
+		width: 100vh;
+		height: 35rem;
+		background-color: pink;
+		display: block;
+	}
+
+	#heading{
+		width: 100%;
+		padding: 6rem;
+		text-align: center;
+
+	}
+
+	#heading p{
+		margin: auto;
+		padding: 15px;
+		background-color: pink;
+		text-align: center !important;
+	}
+
+	form{
+		padding: 0px;
+		background-color: pink;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+
+	.div2{
+		display: none;
+	}
+}
