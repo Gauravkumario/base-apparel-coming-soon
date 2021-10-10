@@ -13,6 +13,7 @@ function validation() {
         document.getElementById('submit-txt').style.display = "block";
         document.getElementById('error-txt').style.display = "";
         document.getElementById('user-mail').style.border = ""
+        document.getElementById('email').value = ""
         document.getElementById('error-logo').style.display = "none"
     }
 
