@@ -5,107 +5,7 @@
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-/************main-div*******************/
-.parent {
-	width: 100%;
-	height: 100vh;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 1fr;
-}
-
-/*********************left-div******************/
-.div1{grid-area: 1 / 1 / 2 / 2;
-	width: 122%;
-	background-image: url(./images/bg-pattern-desktop.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 5rem 9rem 7rem;
-	display: flex;
-	flex-direction: column;
-	align-items: right;
-	justify-content: space-between;
-
-}
-
-.div1 #company-logo{
-	width: 200px;
-}
-
-.div1 #ambassador-image{
-	display: none;
-}
-
-.div1 h1{
-	font-size: 64px;
-	color: hsl(0, 6%, 24%);
-	letter-spacing: 1rem;
-}
-
-.div1 h1 mark{
-	color: hsl(0, 36%, 70%);
-	font-weight: 300;
-	background-color: transparent;
-}
-
-.div1 p{
-	color: hsl(0, 36%, 70%);
-	font-size: 18px;
-	line-height: 1.7rem;
-	padding-right: 9rem;
-}
-
-.div1 > form > #user-mail{
-	border: solid;
-	width: 70%;
-	height: 3.2rem;
-	border-radius: 28px;
-	color: hsl(0, 36%, 70%);
-	display: flex;
-	flex-direction: row;
-}
-
-.div1 > form > #user-mail >input{
-	border: none;
-	height: 2.9rem;
-	padding: 15px 18px ;
-	width: 70%;
-	color: hsl(0, 36%, 70%);
-	font-size: 18px;
-	border-radius: 28px;
-}
-
-.div1 > form > #user-mail >input:focus{
-	outline: none;
-}
-
-#error-logo,#arrow-logo{
-	width: 10%;
-	height: 2.9rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#error-logo img{
-	width: 50%;
-	display: none;
-}
-
-#arrow-logo{
-	width: 20%;
-	margin-top: -3px;
-	height: 3.3rem;
-	cursor: pointer;
-	border: none;
-	border-radius: 28px;
-	background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-}
-
-#arrow-logo img{
-	width: 15%;
-}
-
+/* --------------  place holder color ----------------*/
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: hsl(0, 36%, 70%);
   opacity: 1; /* Firefox */
@@ -119,68 +19,187 @@
   color: hsl(0, 36%, 70%);
 }
 
-form > p{
-	color: hsl(0, 93%, 68%) !important;
-	padding: 5px 0 0 18px;
+/************main-div*******************/
+main{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+}
+.left-div{
+	width: auto;
+	height: 100%;
+	background-image: url(images/bg-pattern-desktop.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.left-div-child{
+	width: 70%;
+	height: 100%;
+	margin: auto;
+}
+
+#ambassador-image-bar > #ambassador-image{
 	display: none;
 }
 
+#company-logo-bar{
+	padding: 3rem;
+}
+#heading{
+	margin-top: 1rem;
+	padding: 3rem;
+}
 
-/************************right-div**************/
-.div2{
-	height: 100%;
-	grid-area: 1 / 2 / 2 / 3;
-	background-image: url(./images/hero-desktop.jpg);
-	background-size: cover ;
-	background-position: right;
-	background-repeat: no-repeat;
-	position: relative;
+#heading > h1{
+	font-size: 74px;
+	letter-spacing: 5px;
+}
+
+h1 > mark {
+	color: hsl(0, 36%, 70%);
+	font-weight: 400;
+	background-color: transparent;
+}
+
+#heading > p{
+	color: hsl(0, 36%, 70%);
+	font-size: 20px;
+	padding-right: 2rem;
+	font-weight: 300;
 }
 
 
 
+#user-mail{
+	display: flex;
+	margin-left: 3rem;
+	width: 400px;
+	height: 3rem;
+	border: 2px solid hsl(0, 36%, 70%);
+	border-radius: 25px;
+}
+
+#user-mail > input{
+	width: 100%;
+	padding-left: 15px;
+	font-size: 18px;
+	font-weight: 400;
+	color: hsl(0, 36%, 70%);
+	border: none;
+	outline: none;
+	border-radius: 25px;
+}
+
+#error-logo{
+	display: none;
+	width: 40px;
+	padding: 5px;
+	align-items: center;
+	justify-content: center;
+}
+#error-logo > img{
+	width: 100%;
+}
+
+#arrow-logo{
+	width: 100px;
+	height: 3.1rem;
+	margin-top: -.2rem;
+	margin-right: -.2rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 25px;
+	background-image: linear-gradient(to right,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+#error-txt{
+	display: none;
+	color: hsl(0, 93%, 68%);
+	margin: .5rem 0rem 0rem 5rem;
+}
+
+#submit-txt{
+	display: none;
+	color: forestgreen;
+	margin: .5rem 0rem 0rem 5rem;
+}
+
+/* ----------------right -div  ----------------------*/
+
+.right-div{
+	width: 50%;
+	height: 100%;
+	background-image: url(images/hero-desktop.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
+	background-color: green;
+}
+
 @media (max-width: 850px){
-	.div1{
+	.left-div{
+		width: 60%;
+	}
+	.left-div-child{
 		width: 100%;
-		padding: 0px;
 	}
 
-	#company-logo-bar{
-		padding: 45px;
+	#user-mail{
+		width: 350px;
 	}
+}
 
-	.div1 #ambassador-image{
-		width: 100vh;
-		height: 35rem;
-		background-color: pink;
+@media (max-width: 750px){
+	.right-div{
+		display: none;
+	}
+	.left-div{
+		width: 100%;
+	}
+	.left-div-child{
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+	}
+	#ambassador-image-bar > #ambassador-image{
 		display: block;
+		width: 100%;
 	}
+	#heading{
+		padding: 1rem 0;
+		text-align: center;
+	}
+	#heading > h1{
+		font-size: 36px;
+	}
+	#heading > p{
+		text-align: center;
+		padding: 9px;
+	}
+	#user-mail{
+		width: 80%;
+		margin: auto;
+	}
+	#error-txt,#submit-txt{
+		text-align: center;
+		margin: 0.5rem 3rem;
+	}
+}
 
+@media (max-width: 600px){
+	#company-logo-bar{
+		padding: 1rem;
+	}
+	.left-div-child{
+		width: 100%;
+	}
 	#heading{
 		width: 100%;
-		padding: 6rem;
-		text-align: center;
-
+		padding: 2rem;
+		margin: 0rem auto;
 	}
-
-	#heading p{
-		margin: auto;
-		padding: 15px;
-		background-color: pink;
-		text-align: center !important;
-	}
-
-	form{
-		padding: 0px;
-		background-color: pink;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: center;
-
-	}
-
-	.div2{
-		display: none;
+	#heading > h1{
+		font-size: 32px;
 	}
 }

@@ -16,34 +16,35 @@
 </head>
 <body>
   <main class="parent">
-    <div class="div1">
-      
+    <div class="left-div">
+      <div class="left-div-child">
+      <!--  company logo section  -->
       <div id="company-logo-bar">
         <img id="company-logo" src="images/logo.svg" alt="company-logo">
       </div>
-
+      <!-- company ambassador img section   -->
       <div id="ambassador-image-bar">
         <img id="ambassador-image" src="images/hero-mobile.jpg" alt="ambassador-image">
       </div>
-      
+      <!-- headline section   -->
       <div id="heading">
         <h1><mark>WE'RE</mark> COMING SOON</h1>
         <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
       </div>
-      
-
-      <form>
+      <!-- form area   -->
+      <div>
         <div id="user-mail">
-          <input type="mail" name="mail" placeholder="Email Address">
+          <input id="email" type="mail" name="mail" placeholder="Email Address" autocomplete="off">
           <div id="error-logo"><img src="images/icon-error.svg" alt="error-logo" oncontextmenu="return false"></div>
           <button id="arrow-logo"><img src="images/icon-arrow.svg" alt="arrow-logo" oncontextmenu="return false"></button>
         </div>
-        <p>Please provide a valid email</p>
-      </form>
+        <p id="error-txt">Please provide a valid email</p>
+        <p id="submit-txt">Thank you your mail has been submitted</p>
+      </div>
+     </div>
     </div>
-
     <!--left bar-->
-    <div class="div2"></div>
+    <div class="right-div"></div>
   </main>
   <script src="main.js"></script>
 </body>
